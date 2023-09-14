@@ -148,5 +148,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _target: {x: 0, y: 0}
   _speed: 1
-  _hp: 1
+  _hp: 2
   _coins: 1

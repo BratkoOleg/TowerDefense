@@ -10,11 +10,29 @@ public class TowerGun : MonoBehaviour
     private bool _foundTarget = false;
     private GameObject[] _enemys;
     private GameObject _nearest;
+    [SerializeField] GameObject _bulletPrefab;
+    [SerializeField] Transform _weaponDir;
+    [SerializeField] float _reload = 1f;
+
+    void Awake()
+    {
+        StartCoroutine(ReloadGun());
+    }
 
     void Update()
     {
         if(_foundTarget)
         SetRotationGun(SetNearestEnemy());
+    }
+
+    private IEnumerator ReloadGun()
+    {
+        while(true)
+        {
+            if(_foundTarget)
+            Instantiate(_bulletPrefab, _weaponDir.position, transform.rotation);
+            yield return new WaitForSeconds(_reload);
+        }
     }
 
     private void SetRotationGun(GameObject enemy)

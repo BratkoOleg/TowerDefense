@@ -19,4 +19,21 @@ public class Enemy : MonoBehaviour
         float step = _speed * Time.deltaTime;
         transform.position = Vector2.MoveTowards(transform.position, _target, step);
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.gameObject.tag == "Bullet")
+        {
+            ChangedHealth();
+        }
+    }
+
+    private void ChangedHealth()
+    {
+        _hp--;
+        if(_hp <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
 }
