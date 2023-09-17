@@ -19,4 +19,5 @@ public class EventBus
     
     public Action TowerAttacked;
     public Action<int> EarnedFromEnemy;
+    public Action<int> ExpFromEnemy;
 }

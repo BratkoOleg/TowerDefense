@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Android.Types;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class TowerHealthBar : MonoBehaviour
 {
-    [SerializeField] Slider _slider;
+    [SerializeField] Image _imageHPbar;
     [SerializeField] int _maxHP = 5;
     [SerializeField] int _currentHP;
 
@@ -22,13 +23,21 @@ public class TowerHealthBar : MonoBehaviour
 
     private void Awake()
     {
-        _slider = GetComponent<Slider>();
         _currentHP = _maxHP;
     }
 
     private void OnTowerAttacked()
     {
         _currentHP--;
-        _slider.value -= (float)1 / _currentHP;
+        Debug.Log("tower attacked");
+        if(_currentHP <= 0)
+        {
+            SceneManager.LoadScene("Menu");
+        }
+        else
+        {
+            float curHpInPercent = (float)_currentHP / _maxHP;
+            _imageHPbar.fillAmount = curHpInPercent;
+        }
     }
 }

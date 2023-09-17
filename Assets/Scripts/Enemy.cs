@@ -8,10 +8,12 @@ public class Enemy : MonoBehaviour
     [SerializeField] float _speed;
     [SerializeField] int _hp = 1;
     [SerializeField] int _coins = 1;
+    [SerializeField] int _exp = 1;
 
     void OnDisable()
     {
         EventBus.Instance.EarnedFromEnemy?.Invoke(_coins);
+        EventBus.Instance.ExpFromEnemy?.Invoke(_exp);
     }
 
     void Update()

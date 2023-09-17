@@ -10,8 +10,8 @@ public class Tower : MonoBehaviour
         if(other.gameObject.tag == "Enemy")
         {
             Debug.Log("got damage");
-            EventBus.Instance.TowerAttacked?.Invoke();
             Destroy(other.gameObject);
+            EventBus.Instance.TowerAttacked?.Invoke();
         }
     }
 }

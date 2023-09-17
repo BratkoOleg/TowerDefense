@@ -37,6 +37,7 @@ public class TowerGun : MonoBehaviour
 
     private void SetRotationGun(GameObject enemy)
     {
+        if(enemy != null)
         transform.rotation = Quaternion.LookRotation(Vector3.forward, enemy.transform.position);
     }
 
