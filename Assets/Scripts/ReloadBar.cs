@@ -20,10 +20,13 @@ public class ReloadBar : MonoBehaviour
         EventBus.Instance.GotReloadSkill -= SetReloadSkill;
     }
 
-    private void SetReloadSkill(float reload)
+    private void SetReloadSkill(float reload, string name)
     {
-        _reload = reload;
-        _maxReload = reload;
+        if(gameObject.transform.parent.name == name)
+        {
+            _reload = reload;
+            _maxReload = reload;
+        }
     }
 
     void Update()
@@ -35,7 +38,7 @@ public class ReloadBar : MonoBehaviour
         }
         else
         {
-            EventBus.Instance.FinishedReloadSkill?.Invoke();
+            EventBus.Instance.FinishedReloadSkill?.Invoke(gameObject.transform.parent.name);
         }
     }
 }

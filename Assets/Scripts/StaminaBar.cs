@@ -31,12 +31,12 @@ public class StaminaBar : MonoBehaviour
         }
     }
 
-    private void OnChangedStamina(float cost)
+    private void OnChangedStamina(float cost, string name)
     {
         if(curStamina >= cost)
         {
             curStamina -= cost;
-            EventBus.Instance.UsedSkill?.Invoke();
+            EventBus.Instance.UsedSkill?.Invoke(name);
         }
     }
 }
