@@ -5,6 +5,24 @@ using UnityEngine;
 
 public class Tower : MonoBehaviour
 {
+    [SerializeField] int _level;
+
+    void OnEnable()
+    {
+        EventBus.Instance.LeveledUp += OnLevelChanged;
+    }
+
+    void OnDisable()
+    {
+        EventBus.Instance.LeveledUp -= OnLevelChanged;
+    }
+
+    private void OnLevelChanged(int level)
+    {
+        _level = level;
+        Debug.Log("u level up, yr lvl - " + _level);
+    }
+
     private void OnTriggerEnter2D(Collider2D other) 
     {
         if(other.gameObject.tag == "Enemy")

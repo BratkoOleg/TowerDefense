@@ -22,6 +22,9 @@ public class EventBus
     public Action<int> EarnedFromEnemy;
     public Action<int> ExpFromEnemy;
 
+    public Action<int, int> ChangedExp;
+    public Action<int> LeveledUp;
+
     public Action<float, string> TriedToUseSkill;
     public Action<string> UsedSkill;
     public Action<float, string> GotReloadSkill;

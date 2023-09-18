@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class TowerExpBar : MonoBehaviour
 {
     [SerializeField] private Image _image;
+    private int _level;
     private int _maxXP = 10;
     private int _curXP;
 
@@ -25,5 +26,18 @@ public class TowerExpBar : MonoBehaviour
         float curXpInPercent = (float)_curXP / _maxXP;
         if(_image != null)
         _image.fillAmount = curXpInPercent;
+
+        if(_image.fillAmount >= 1)
+        {
+            _curXP = 0;
+            _image.fillAmount = 0;
+            _level++;
+            float nextMaxXp = (float)_maxXP * 0.5f; 
+            _maxXP += (int)nextMaxXp;
+            Debug.Log("you need exp to lvl up: " + _maxXP);
+            EventBus.Instance.LeveledUp?.Invoke(_level);
+        }
+        
+        EventBus.Instance.ChangedExp?.Invoke(_curXP, _maxXP);
     }
 }
