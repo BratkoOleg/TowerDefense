@@ -23,6 +23,7 @@ public class TowerExpBar : MonoBehaviour
     {
         _curXP += exp;
         float curXpInPercent = (float)_curXP / _maxXP;
+        if(_image != null)
         _image.fillAmount = curXpInPercent;
     }
 }

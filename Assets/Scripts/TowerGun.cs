@@ -10,9 +10,21 @@ public class TowerGun : MonoBehaviour
     private bool _foundTarget = false;
     private GameObject[] _enemys;
     private GameObject _nearest;
-    [SerializeField] GameObject _bulletPrefab;
-    [SerializeField] Transform _weaponDir;
-    [SerializeField] float _reload = 1f;
+    private float _timer;
+    private bool _startedSkillBonus = false;
+    [SerializeField] private GameObject _bulletPrefab;
+    [SerializeField] private Transform _weaponDir;
+    [SerializeField] private float _reload = 1f;
+
+    void OnEnable()
+    {
+        EventBus.Instance.Skill1WasUsed += OnChangedShootSpeed;
+    }
+
+    void OnDisable()
+    {
+        EventBus.Instance.Skill1WasUsed -= OnChangedShootSpeed;
+    }
 
     void Awake()
     {
@@ -23,6 +35,16 @@ public class TowerGun : MonoBehaviour
     {
         if(_foundTarget)
         SetRotationGun(SetNearestEnemy());
+        
+        if(_startedSkillBonus == true && _timer >= 0)
+        {
+            _timer -= Time.deltaTime;
+        }
+        else
+        {
+            _startedSkillBonus = false;
+            _reload = 1f;
+        }
     }
 
     private IEnumerator ReloadGun()
@@ -67,5 +89,12 @@ public class TowerGun : MonoBehaviour
             SetNearestEnemy();
             _foundTarget = true;
         }
+    }
+
+    private void OnChangedShootSpeed(float workTime)
+    {
+        _startedSkillBonus = true;
+        _reload = _reload * 0.5f;
+        _timer = workTime;
     }
 }

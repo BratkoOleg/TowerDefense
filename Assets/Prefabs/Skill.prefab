@@ -56,6 +56,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _skillReload: 5
   _skillCost: 3
+  _workTimeSkill: 3
   _button: {fileID: 6946348196342723665}
 --- !u!222 &6946348196342723667
 CanvasRenderer:

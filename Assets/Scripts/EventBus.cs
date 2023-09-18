@@ -18,10 +18,14 @@ public class EventBus
     }
     
     public Action TowerAttacked;
+
     public Action<int> EarnedFromEnemy;
     public Action<int> ExpFromEnemy;
+
     public Action<float, string> TriedToUseSkill;
     public Action<string> UsedSkill;
     public Action<float, string> GotReloadSkill;
     public Action<string> FinishedReloadSkill;
+
+    public Action<float> Skill1WasUsed;
 }
