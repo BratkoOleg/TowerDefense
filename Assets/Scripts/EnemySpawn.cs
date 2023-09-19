@@ -11,8 +11,8 @@ public class EnemySpawn : MonoBehaviour
     [SerializeField] Vector2[] _directions;
     [SerializeField] float _timerToSpawn = 1f;
     [SerializeField] private GameObject _enemySpawner;
+    [SerializeField] private float _time;
     private bool _spawnedSpawner = false;
-    private float _time;
 
     void Awake()
     {

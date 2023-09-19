@@ -20,7 +20,6 @@ public class Tower : MonoBehaviour
     private void OnLevelChanged(int level)
     {
         _level = level;
-        Debug.Log("u level up, yr lvl - " + _level);
     }
 
     private void OnTriggerEnter2D(Collider2D other) 

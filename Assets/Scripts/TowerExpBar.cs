@@ -34,7 +34,6 @@ public class TowerExpBar : MonoBehaviour
             _level++;
             float nextMaxXp = (float)_maxXP * 0.5f; 
             _maxXP += (int)nextMaxXp;
-            Debug.Log("you need exp to lvl up: " + _maxXP);
             EventBus.Instance.LeveledUp?.Invoke(_level);
         }
         
