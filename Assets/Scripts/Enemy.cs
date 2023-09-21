@@ -20,6 +20,12 @@ public class Enemy : MonoBehaviour
         _curHP = _maxHP;
     }
 
+    void OnDisable()
+    {
+        EventBus.Instance.EarnedFromEnemy?.Invoke(_coins);
+        EventBus.Instance.ExpFromEnemy?.Invoke(_exp);
+    }
+
     void Update()
     {
         float step = _speed * Time.deltaTime;

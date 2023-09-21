@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2613292686218958710}
   - component: {fileID: 5044741867047863545}
   - component: {fileID: 9120130821599461546}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 6531335429956228158}
   - component: {fileID: 8502935578705914343}
   - component: {fileID: 8762558675033796761}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -162,7 +162,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3578264717628948011}
   - component: {fileID: 6669613232727362855}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: HPbar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -230,7 +230,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 2613292686218958710}
   m_HandleRect: {fileID: 0}
@@ -254,7 +254,7 @@ GameObject:
   - component: {fileID: 3404778414390512791}
   - component: {fileID: 2430177212106877312}
   - component: {fileID: 5949433959769621211}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -270,7 +270,7 @@ RectTransform:
   m_GameObject: {fileID: 3044932436858765125}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.65529, y: 0.65529, z: 0.65529}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3578264717628948011}
@@ -279,7 +279,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: -1.73}
+  m_AnchoredPosition: {x: -0.033, y: -1.121}
   m_SizeDelta: {x: 6.8721, y: 2.291}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &3404778414390512791
@@ -356,7 +356,7 @@ GameObject:
   - component: {fileID: 3551394268156606617}
   - component: {fileID: 3551394268156606622}
   - component: {fileID: 3551394268156606623}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Enemy2
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -372,7 +372,7 @@ Transform:
   m_GameObject: {fileID: 3551394268156606620}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6181639529729544698}
@@ -440,7 +440,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c5374162c6c044b49972641a62b94284, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -485,7 +485,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.03273055, y: 0.0040913075}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -496,5 +496,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.41084892, y: 0.6317805}
   m_EdgeRadius: 0
