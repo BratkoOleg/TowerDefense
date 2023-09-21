@@ -33,7 +33,6 @@ public class TowerGun : MonoBehaviour
 
     void Update()
     {
-        if(_foundTarget)
         SetRotationGun(SetNearestEnemy());
         
         if(_startedSkillBonus == true && _timer >= 0)
@@ -51,7 +50,6 @@ public class TowerGun : MonoBehaviour
     {
         while(true)
         {
-            if(_foundTarget)
             Instantiate(_bulletPrefab, _weaponDir.position, transform.rotation);
             yield return new WaitForSeconds(_reload);
         }
@@ -80,15 +78,6 @@ public class TowerGun : MonoBehaviour
             }
         }
         return _nearest;
-    }
-    
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if(other.gameObject.tag == "Enemy")
-        {
-            SetNearestEnemy();
-            _foundTarget = true;
-        }
     }
 
     private void OnChangedShootSpeed(float workTime)

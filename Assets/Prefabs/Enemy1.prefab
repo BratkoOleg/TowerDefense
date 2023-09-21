@@ -66,11 +66,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: ba587200d7759d24ca8c7a259b100e11, type: 3}
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
@@ -142,8 +142,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: b2829b4392f2ded419d66abe189808a5, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -188,8 +188,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 1.142}
-  m_SizeDelta: {x: 160, y: 20}
+  m_AnchoredPosition: {x: -0.0103, y: 1.1769}
+  m_SizeDelta: {x: 156.855, y: 24.8119}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &6669613232727362855
 MonoBehaviour:
@@ -251,12 +251,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6181639529729544698}
-  - component: {fileID: 8570990775496680042}
   - component: {fileID: 3404778414390512791}
   - component: {fileID: 2430177212106877312}
   - component: {fileID: 5949433959769621211}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -283,18 +282,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -1.73}
   m_SizeDelta: {x: 6.8721, y: 2.291}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &8570990775496680042
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3044932436858765125}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2a2eba4dd721d54187d70de3517eb44, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!223 &3404778414390512791
 Canvas:
   m_ObjectHideFlags: 0
@@ -370,7 +357,7 @@ GameObject:
   - component: {fileID: 3551394268156606622}
   - component: {fileID: 3551394268156606623}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Enemy1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -406,9 +393,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _target: {x: 0, y: 0}
   _speed: 2
-  _hp: 1
+  _maxHP: 2
   _coins: 1
   _exp: 1
+  _curHP: 0
+  _image: {fileID: 9120130821599461546}
+  _damage: 1
 --- !u!212 &3551394268156606617
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -492,7 +482,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

@@ -2,19 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Tower : MonoBehaviour
 {
-    [SerializeField] int _level;
+    [SerializeField] private int _level;
+    [SerializeField] private int _maxHP = 1000;
+    [SerializeField] int _curHP;
+    [SerializeField] Image _image;
 
-    void OnEnable()
+    void Awake()
     {
-        EventBus.Instance.LeveledUp += OnLevelChanged;
-    }
-
-    void OnDisable()
-    {
-        EventBus.Instance.LeveledUp -= OnLevelChanged;
+        _curHP = _maxHP;
     }
 
     private void OnLevelChanged(int level)
@@ -26,9 +26,24 @@ public class Tower : MonoBehaviour
     {
         if(other.gameObject.tag == "Enemy")
         {
-            Debug.Log("got damage");
-            Destroy(other.gameObject);
-            EventBus.Instance.TowerAttacked?.Invoke();
+            Debug.Log("tower got damage");
+            int enemyDamage;
+            enemyDamage = other.gameObject.GetComponent<Enemy>()._damage;
+            OnHealthChanged(enemyDamage);
+        }
+    }
+
+    private void OnHealthChanged(int damage)
+    {
+        _curHP -= damage;
+        if(_curHP <= 0)
+        {
+            SceneManager.LoadScene("Menu");
+        }
+        else
+        {
+            float curHpInPercent = (float)_curHP / _maxHP;
+            _image.fillAmount = curHpInPercent;
         }
     }
 }

@@ -1,19 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
     [SerializeField] Vector2 _target = Vector2.zero;
-    [SerializeField] float _speed;
-    [SerializeField] int _hp = 1;
-    [SerializeField] int _coins = 1;
-    [SerializeField] int _exp = 1;
+    [SerializeField] private float _speed;
+    [SerializeField] private int _maxHP = 2;
+    [SerializeField] private int _coins = 1;
+    [SerializeField] private int _exp = 1;
+    [SerializeField] int _curHP;
+    [SerializeField] Image _image;
+    public int _damage = 1;
 
-    void OnDisable()
+    void Awake()
     {
-        EventBus.Instance.EarnedFromEnemy?.Invoke(_coins);
-        EventBus.Instance.ExpFromEnemy?.Invoke(_exp);
+        _curHP = _maxHP;
     }
 
     void Update()
@@ -26,16 +30,23 @@ public class Enemy : MonoBehaviour
     {
         if(other.gameObject.tag == "Bullet")
         {
-            ChangedHealth();
+            Debug.Log("enemy got damage");
+            int bulletDamage = other.gameObject.GetComponent<Bullet>().bulletDamage;
+            OnHealthChanged(bulletDamage);
         }
     }
 
-    private void ChangedHealth()
+    private void OnHealthChanged(int damage)
     {
-        _hp--;
-        if(_hp <= 0)
+        _curHP -= damage;
+        if(_curHP <= 0)
         {
             Destroy(gameObject);
+        }
+        else
+        {
+            float curHpInPercent = (float)_curHP / _maxHP;
+            _image.fillAmount = curHpInPercent;
         }
     }
 }

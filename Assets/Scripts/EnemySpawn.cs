@@ -12,16 +12,19 @@ public class EnemySpawn : MonoBehaviour
     [SerializeField] float _timerToSpawn = 1f;
     [SerializeField] private GameObject _enemySpawner;
     [SerializeField] private float _time;
+    [SerializeField] private float _waitBeforeStart = 2f;
     private bool _spawnedSpawner = false;
-
-    void Awake()
-    {
-        StartCoroutine(Spawner());
-    }
+    private bool _startedToSpawn = false;
 
     void Update()
     {
         _time += Time.deltaTime;
+        
+        if(_time >= _waitBeforeStart && _startedToSpawn == false)
+        {
+            StartCoroutine(Spawner());
+            _startedToSpawn = true;
+        }
 
         if(_time >= 120 && _spawnedSpawner == false)
         {

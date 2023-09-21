@@ -46,8 +46,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemys:
   - {fileID: 3551394268156606620, guid: d27806663129f154aa8bec0015a0397e, type: 3}
-  - {fileID: 3551394268156606620, guid: db736058f41af5a45aab39995ee72cb6, type: 3}
-  - {fileID: 3551394268156606620, guid: 655dd4a9f3d534c4ab240da109351947, type: 3}
+  - {fileID: 3551394268156606620, guid: 70451e20e1263fc4db6d74aeab489687, type: 3}
+  - {fileID: 3551394268156606620, guid: 33817060efdbea646ba6e8ba07237014, type: 3}
   _directions:
   - {x: 10, y: 0}
   - {x: 10, y: 1}
@@ -71,3 +71,5 @@ MonoBehaviour:
   - {x: 2, y: -7}
   _timerToSpawn: 2
   _enemySpawner: {fileID: 4240621132214973802}
+  _time: 0
+  _waitBeforeStart: 2
