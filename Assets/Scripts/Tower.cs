@@ -12,6 +12,16 @@ public class Tower : MonoBehaviour
     [SerializeField] int _curHP;
     [SerializeField] Image _image;
 
+    void OnEnable()
+    {
+        //EventBus.Instance.Skill2WasUsed += OnChangedShootSpeed;
+    }
+
+    void OnDisable()
+    {
+        //EventBus.Instance.Skill2WasUsed -= OnChangedShootSpeed;
+    }
+
     void Awake()
     {
         _curHP = _maxHP;

@@ -27,6 +27,6 @@ public class Level : MonoBehaviour
 
     private void OnLevelChanged(int level)
     {
-        _levelText.text = "Level: " + level;
+        _levelText.text = "" + level;
     }
 }

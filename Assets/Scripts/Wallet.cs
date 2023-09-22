@@ -26,6 +26,6 @@ public class Wallet : MonoBehaviour
     private void OnEarnedFromEnemy(int coins)
     {
         _coinsAmount += coins;
-        _wallet.text = "coins: " + _coinsAmount;
+        _wallet.text = "" + _coinsAmount;
     }
 }

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6946348196342723666}
   - component: {fileID: 6946348196342723665}
   m_Layer: 5
-  m_Name: Skill
+  m_Name: Skill(EncreaseAttackSpeed)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -57,6 +57,7 @@ MonoBehaviour:
   _skillCost: 3
   _workTimeSkill: 3
   _button: {fileID: 6946348196342723665}
+  choosedSkill: 0
 --- !u!222 &6946348196342723667
 CanvasRenderer:
   m_ObjectHideFlags: 0
