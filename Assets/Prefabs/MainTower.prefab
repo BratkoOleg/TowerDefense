@@ -1068,7 +1068,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _level: 0
-  _maxHP: 100
+  _maxHP: 10
   _curHP: 0
   _image: {fileID: 5222283754409680539}
 --- !u!212 &5222283753577349859

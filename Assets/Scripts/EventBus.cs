@@ -31,5 +31,5 @@ public class EventBus
     public Action<string> FinishedReloadSkill;
 
     public Action<float> Skill1WasUsed;
-    public Action<float> Skill2WasUsed;
+    public Action Skill2WasUsed;
 }

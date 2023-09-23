@@ -393,7 +393,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _target: {x: 0, y: 0}
   _speed: 1
-  _maxHP: 2
+  _maxHP: 3
   _coins: 5
   _exp: 3
   _curHP: 0
