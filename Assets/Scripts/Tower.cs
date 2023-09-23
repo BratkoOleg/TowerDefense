@@ -11,11 +11,13 @@ public class Tower : MonoBehaviour
     [SerializeField] private int _maxHP = 1000;
     [SerializeField] int _curHP;
     [SerializeField] Image _image;
+    private int _kills, _coins;
     private bool _startedSkillBonus = false;
 
     void OnEnable()
     {
         EventBus.Instance.Skill2WasUsed += OnHealUp;
+        EventBus.Instance.EarnedFromEnemy += Summary;
     }
 
     void OnDisable()
@@ -49,13 +51,19 @@ public class Tower : MonoBehaviour
         _curHP -= damage;
         if(_curHP <= 0)
         {
-            SceneManager.LoadScene("Menu");
+            EventBus.Instance.PlayerDied?.Invoke(_kills, _coins);
         }
         else
         {
             float curHpInPercent = (float)_curHP / _maxHP;
             _image.fillAmount = curHpInPercent;
         }
+    }
+
+    private void Summary(int coins)
+    {
+        _coins += coins;
+        _kills++;
     }
 
     private void OnHealUp()
