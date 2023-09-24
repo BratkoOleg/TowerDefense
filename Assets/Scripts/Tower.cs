@@ -73,5 +73,6 @@ public class Tower : MonoBehaviour
         _curHP += (int)howMuchHeal;
         if(_curHP > _maxHP)
         _curHP = _maxHP;
+        _image.fillAmount = (float)_curHP / _maxHP;
     }
 }

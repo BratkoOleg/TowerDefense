@@ -19,7 +19,7 @@ public class StaminaBar : MonoBehaviour
 
     void OnDisable()
     {
-
+        EventBus.Instance.TriedToUseSkill -= OnChangedStamina;
     }
 
     void Update()
