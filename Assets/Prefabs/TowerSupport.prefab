@@ -352,6 +352,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3092984681735875228}
+  - component: {fileID: 7634653032506119259}
   - component: {fileID: 3092984681735875229}
   - component: {fileID: 3654147412665000287}
   - component: {fileID: 4255677598672130715}
@@ -378,6 +379,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7634653032506119259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3092984681735875230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 365b3950f8543cc479d595f0765cde4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _tilemap: {fileID: 0}
+  _towerTile: {fileID: 11400000, guid: 63724a929cbdda946afc7acb9688f0ad, type: 2}
+  _buildEnable: {fileID: 11400000, guid: ac530a07c8505a4478e0c87c25067f52, type: 2}
 --- !u!212 &3092984681735875229
 SpriteRenderer:
   m_ObjectHideFlags: 0

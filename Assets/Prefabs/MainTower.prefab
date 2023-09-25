@@ -1875,6 +1875,7 @@ GameObject:
   - component: {fileID: 5222283753577349858}
   - component: {fileID: 5222283753577349871}
   - component: {fileID: 8056031790538876978}
+  - component: {fileID: -2377649523824793171}
   - component: {fileID: 5222283753577349859}
   - component: {fileID: 5222283753577349856}
   - component: {fileID: -6720286922720933123}
@@ -1937,6 +1938,21 @@ MonoBehaviour:
   _kills: {fileID: 1137706286}
   _gun: {fileID: 5222283754366481104}
   _spawners: []
+--- !u!114 &-2377649523824793171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5222283753577349860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 365b3950f8543cc479d595f0765cde4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _tilemap: {fileID: 0}
+  _towerTile: {fileID: 11400000, guid: 63724a929cbdda946afc7acb9688f0ad, type: 2}
+  _buildEnable: {fileID: 11400000, guid: ac530a07c8505a4478e0c87c25067f52, type: 2}
 --- !u!212 &5222283753577349859
 SpriteRenderer:
   m_ObjectHideFlags: 0
