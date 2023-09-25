@@ -949,6 +949,7 @@ MonoBehaviour:
   _menu: {fileID: 4622709439518241815}
   _costUpgrade: 5
   _cost: {fileID: 1799389094350431771}
+  _gun: {fileID: 88377849211504006, guid: ef8c33e74acf525419c4e69dafbeec41, type: 3}
 --- !u!212 &3092984681735875229
 SpriteRenderer:
   m_ObjectHideFlags: 0

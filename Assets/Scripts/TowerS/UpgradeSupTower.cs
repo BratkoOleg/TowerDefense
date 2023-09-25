@@ -13,6 +13,7 @@ public class UpgradeSupTower : MonoBehaviour
     [SerializeField] private GameObject _menu;
     [SerializeField] int _costUpgrade;
     [SerializeField] private TextMeshProUGUI _cost;
+    [SerializeField] private GameObject _gun;
 
     void OnEnable()
     {
@@ -46,6 +47,9 @@ public class UpgradeSupTower : MonoBehaviour
         if(Wallet._coinsAmount >= _costUpgrade)
         {
             Wallet._coinsAmount -= _costUpgrade;
+
+            GameObject gun = Instantiate(_gun, transform.position, Quaternion.identity);
+            gun.transform.SetParent(gameObject.transform);
 
             _costUpgrade += (int)(_costUpgrade * 0.5f);
             SetText(_costUpgrade);
