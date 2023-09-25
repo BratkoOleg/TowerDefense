@@ -29,12 +29,16 @@ public class TowerSupport : MonoBehaviour
         }
     }
 
+    void OnDisable()
+    {
+        _tilemap.SetTile(SetPosition(), _buildingAvaible);
+    }
+
     private void OnHealthChanged(int damage)
     {
         _curHP -= damage;
         if(_curHP <= 0)
         {
-            _tilemap.SetTile(SetPosition(), _buildingAvaible);
             Destroy(gameObject);
         }
         else

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Wallet : MonoBehaviour
 {
     [SerializeField] Text _wallet;
-    [SerializeField] int _coinsAmount = 0;
+    public static int _coinsAmount = 0;
 
     void OnEnable()
     {
