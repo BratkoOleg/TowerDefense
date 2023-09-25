@@ -7,7 +7,6 @@ using UnityEngine;
 
 public class TowerGun : MonoBehaviour
 {
-    private bool _foundTarget = false;
     private GameObject[] _enemys;
     private GameObject _nearest;
     private float _timer;

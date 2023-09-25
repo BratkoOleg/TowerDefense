@@ -12,7 +12,6 @@ public class Tower : MonoBehaviour
     [SerializeField] int _curHP;
     [SerializeField] Image _image;
     private int _kills, _coins;
-    private bool _startedSkillBonus = false;
 
     void OnEnable()
     {

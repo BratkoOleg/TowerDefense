@@ -21,7 +21,9 @@ public class RollSkills : MonoBehaviour
         SkillNetwork.Add(_skillsCanvas[0], _skillsGame[0]);
         SkillNetwork.Add(_skillsCanvas[1], _skillsGame[1]);
         SkillNetwork.Add(_skillsCanvas[2], _skillsGame[2]);
-
+        
+        Roll();
+        
         _buttronRoll.onClick.AddListener(Roll);
         _buttronOk.onClick.AddListener(CloseWindow);
     }
