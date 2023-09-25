@@ -1952,7 +1952,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tilemap: {fileID: 0}
   _towerTile: {fileID: 11400000, guid: 63724a929cbdda946afc7acb9688f0ad, type: 2}
-  _buildEnable: {fileID: 11400000, guid: ac530a07c8505a4478e0c87c25067f52, type: 2}
+  _buildEnable: {fileID: 11400000, guid: 3fc1875fcfd864b46ba780e7c341a409, type: 2}
 --- !u!212 &5222283753577349859
 SpriteRenderer:
   m_ObjectHideFlags: 0
