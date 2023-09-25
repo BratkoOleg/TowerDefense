@@ -13,6 +13,7 @@ public class EnemySpawn : MonoBehaviour
     [SerializeField] private GameObject _enemySpawner;
     [SerializeField] private float _time;
     [SerializeField] private float _waitBeforeStart = 2f;
+    [SerializeField] private Transform _parent;
     private bool _spawnedSpawner = false;
     private bool _startedToSpawn = false;
 
@@ -54,7 +55,8 @@ public class EnemySpawn : MonoBehaviour
 
         while(_time >= 90)
         {
-            Instantiate(_enemys[Random.Range(0, _enemys.Length)], _directions[Random.Range(0, _directions.Length)],quaternion.identity);
+            GameObject setEnemy = Instantiate(_enemys[Random.Range(0, _enemys.Length)], _directions[Random.Range(0, _directions.Length)],quaternion.identity);
+            setEnemy.transform.SetParent(_parent);
             yield return new WaitForSeconds(_timerToSpawn);
         }
     }
@@ -67,6 +69,7 @@ public class EnemySpawn : MonoBehaviour
 
     private void Instantiate(int enemy)
     {
-        Instantiate(_enemys[enemy], _directions[Random.Range(0, _directions.Length)],quaternion.identity);
+        GameObject setEnemy = Instantiate(_enemys[enemy], _directions[Random.Range(0, _directions.Length)],quaternion.identity);
+        setEnemy.transform.SetParent(_parent);
     }
 }

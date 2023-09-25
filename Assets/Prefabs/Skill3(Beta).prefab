@@ -9,12 +9,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6946348196342723664}
-  - component: {fileID: 6946348196342723676}
+  - component: {fileID: 566027790723945762}
   - component: {fileID: 6946348196342723667}
   - component: {fileID: 6946348196342723666}
   - component: {fileID: 6946348196342723665}
   m_Layer: 5
-  m_Name: Skill(EncreaseAttackSpeed)
+  m_Name: Skill3(Beta)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41,7 +41,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &6946348196342723676
+--- !u!114 &566027790723945762
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -50,14 +50,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6946348196342723671}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7f7ea5a09f93614993712122baec2bf, type: 3}
+  m_Script: {fileID: 11500000, guid: ab01b1a8f70e6af45ab30ba2c0057ea1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _skillReload: 5
-  _skillCost: 3
-  _workTimeSkill: 3
+  _skillReload: 10
+  _skillCost: 5
   _button: {fileID: 6946348196342723665}
-  choosedSkill: 0
 --- !u!222 &6946348196342723667
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -86,8 +84,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -1618096540, guid: b0b42f7439c5f3a4887cbb82c76c290b, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4

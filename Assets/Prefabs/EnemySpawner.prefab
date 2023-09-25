@@ -73,3 +73,4 @@ MonoBehaviour:
   _enemySpawner: {fileID: 4240621132214973802}
   _time: 0
   _waitBeforeStart: 2
+  _parent: {fileID: 0}

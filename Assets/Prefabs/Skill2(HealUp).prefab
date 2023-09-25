@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6946348196342723666}
   - component: {fileID: 6946348196342723665}
   m_Layer: 5
-  m_Name: Skill(HealUp)
+  m_Name: Skill2(HealUp)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
