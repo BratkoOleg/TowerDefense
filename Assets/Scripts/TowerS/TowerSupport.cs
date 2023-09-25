@@ -31,6 +31,7 @@ public class TowerSupport : MonoBehaviour
 
     void OnDisable()
     {
+        if(_tilemap != null)
         _tilemap.SetTile(SetPosition(), _buildingAvaible);
     }
 

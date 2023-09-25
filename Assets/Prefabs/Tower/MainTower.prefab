@@ -996,9 +996,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5222283752962660684}
+  - component: {fileID: 5222283752962660681}
   - component: {fileID: 5222283752962660682}
   - component: {fileID: 5222283752962660683}
-  - component: {fileID: 5222283752962660681}
   m_Layer: 5
   m_Name: WalletText
   m_TagString: Untagged
@@ -1026,6 +1026,20 @@ RectTransform:
   m_AnchoredPosition: {x: 7, y: -3.5}
   m_SizeDelta: {x: 345.2898, y: 99.0912}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &5222283752962660681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5222283752962660685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9670080c0b864834b9ba7c9990e3a46d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _wallet: {fileID: 0}
+  _cheatCoin: 0
 --- !u!222 &5222283752962660682
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1068,20 +1082,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 0
---- !u!114 &5222283752962660681
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5222283752962660685}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9670080c0b864834b9ba7c9990e3a46d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _wallet: {fileID: 0}
-  _cheatCoin: 1000
 --- !u!1 &5222283752978995067
 GameObject:
   m_ObjectHideFlags: 0

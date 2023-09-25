@@ -4319,42 +4319,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2891070743774178739, guid: e8d3b97e48e73ee4ca5b7905137b8b18, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2891070743774178739, guid: e8d3b97e48e73ee4ca5b7905137b8b18, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2891070744619967000, guid: e8d3b97e48e73ee4ca5b7905137b8b18, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2891070744619967000, guid: e8d3b97e48e73ee4ca5b7905137b8b18, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2891070744619967000, guid: e8d3b97e48e73ee4ca5b7905137b8b18, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2891070744619967000, guid: e8d3b97e48e73ee4ca5b7905137b8b18, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2891070744619967000, guid: e8d3b97e48e73ee4ca5b7905137b8b18, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2891070744619967000, guid: e8d3b97e48e73ee4ca5b7905137b8b18, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5222283752962660681, guid: e8d3b97e48e73ee4ca5b7905137b8b18, type: 3}
-      propertyPath: _cheatCoin
-      value: 1000
-      objectReference: {fileID: 0}
     - target: {fileID: 5222283753119485614, guid: e8d3b97e48e73ee4ca5b7905137b8b18, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -4411,10 +4375,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainTower
       objectReference: {fileID: 0}
-    - target: {fileID: 5222283754366481104, guid: e8d3b97e48e73ee4ca5b7905137b8b18, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5222283754409680540, guid: e8d3b97e48e73ee4ca5b7905137b8b18, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -4429,38 +4389,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5222283754857796861, guid: e8d3b97e48e73ee4ca5b7905137b8b18, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5295642377029935358, guid: e8d3b97e48e73ee4ca5b7905137b8b18, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5295642377029935358, guid: e8d3b97e48e73ee4ca5b7905137b8b18, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5295642378213273429, guid: e8d3b97e48e73ee4ca5b7905137b8b18, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5295642378213273429, guid: e8d3b97e48e73ee4ca5b7905137b8b18, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5295642378213273429, guid: e8d3b97e48e73ee4ca5b7905137b8b18, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5295642378213273429, guid: e8d3b97e48e73ee4ca5b7905137b8b18, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5295642378213273429, guid: e8d3b97e48e73ee4ca5b7905137b8b18, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5295642378213273429, guid: e8d3b97e48e73ee4ca5b7905137b8b18, type: 3}
-      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
