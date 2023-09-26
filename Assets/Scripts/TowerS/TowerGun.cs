@@ -14,6 +14,7 @@ public class TowerGun : MonoBehaviour
     [SerializeField] private GameObject _bulletPrefab;
     [SerializeField] private Transform _weaponDir;
     [SerializeField] private float _reload = 1f;
+    [SerializeField] private Transform _parent;
 
     private float _speedRotate = 10f;
     public int rotationOffset = -90;
@@ -75,7 +76,8 @@ public class TowerGun : MonoBehaviour
     {
         while(true)
         {
-            Instantiate(_bulletPrefab, this._weaponDir.position, transform.rotation);
+            GameObject bullet = Instantiate(_bulletPrefab, this._weaponDir.position, transform.rotation);
+            bullet.transform.SetParent(_parent);
             yield return new WaitForSeconds(_reload);
         }
     }

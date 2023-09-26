@@ -12,6 +12,7 @@ public class BuildTower : MonoBehaviour
     [SerializeField] private Tile _towerTile;
     [SerializeField] private Tile _buildEnable;
     [SerializeField] private GameObject _grid;
+    [SerializeField] private Transform _parent;
     private bool _buildingMode = false;
 
     void OnEnable()
@@ -51,7 +52,8 @@ public class BuildTower : MonoBehaviour
         if(_tilemap.GetTile(coordinate) == _buildEnable)
         {
             _tilemap.SetTile(coordinate, _towerTile);
-            Instantiate(_tower, coordinate, Quaternion.identity);
+            GameObject tower = Instantiate(_tower, coordinate, Quaternion.identity);
+            tower.transform.SetParent(_parent);
             _grid.SetActive(false);
             Time.timeScale = 1;
             _buildingMode = false;
