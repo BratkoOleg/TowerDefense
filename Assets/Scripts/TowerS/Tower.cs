@@ -12,6 +12,7 @@ public class Tower : MonoBehaviour
     [SerializeField] int _curHP;
     [SerializeField] Image _image;
     private int _kills, _coins;
+    private bool _isAttacking;
 
     void OnEnable()
     {
@@ -41,7 +42,38 @@ public class Tower : MonoBehaviour
             Debug.Log("tower got damage");
             int enemyDamage;
             enemyDamage = other.gameObject.GetComponent<Enemy>()._damage;
-            OnHealthChanged(enemyDamage);
+            //OnHealthChanged(enemyDamage);
+            _isAttacking = true;
+            StartCoroutine(AttackingTower(enemyDamage));
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other) 
+    {
+        if(other.gameObject.tag == "Enemy")
+        {
+            _isAttacking = false;
+        }
+    }
+
+    // private void OnTriggerStay2D(Collider2D other)
+    // {
+    //     if(other.gameObject.tag == "Enemy")
+    //     {
+    //         Debug.Log("ATTACKING");
+    //         int enemyDamage;
+    //         enemyDamage = other.gameObject.GetComponent<Enemy>()._damage;
+    //         StartCoroutine(AttackingTower(enemyDamage));
+    //     }
+    // }
+
+    private IEnumerator AttackingTower(int damage)
+    {
+        while(_isAttacking)
+        {
+            Debug.Log("ATTACKEDs");
+            OnHealthChanged(damage);
+            yield return new WaitForSeconds(1f);
         }
     }
 
