@@ -13,6 +13,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] private int _exp = 1;
     [SerializeField] int _curHP;
     [SerializeField] Image _image;
+    private GameObject[] _players;
+    private GameObject _nearest;
     public int _damage = 1;
 
     void Awake()
@@ -29,7 +31,7 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         float step = _speed * Time.deltaTime;
-        transform.position = Vector2.MoveTowards(transform.position, _target, step);
+        transform.position = Vector2.MoveTowards(transform.position, SetNearestPlayer().transform.position, step);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -40,6 +42,25 @@ public class Enemy : MonoBehaviour
             int bulletDamage = other.gameObject.GetComponent<Bullet>().bulletDamage;
             OnHealthChanged(bulletDamage);
         }
+    }
+
+    private GameObject SetNearestPlayer()
+    {
+        _players = GameObject.FindGameObjectsWithTag("Player");
+        float dis = Mathf.Infinity;
+        Vector3 pos = this.gameObject.transform.position;
+
+        foreach (GameObject enemy in _players)
+        {
+            Vector3 diffPos = enemy.transform.position - pos;
+            float curDis = diffPos.sqrMagnitude;
+            if(curDis < dis)
+            {
+                _nearest = enemy;
+                dis = curDis;
+            }
+        }
+        return _nearest;
     }
 
     private void OnHealthChanged(int damage)

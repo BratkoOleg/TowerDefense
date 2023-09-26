@@ -25,6 +25,11 @@ public class Wallet : MonoBehaviour
         _wallet = GetComponent<Text>();
     }
 
+    void Update()
+    {
+        _wallet.text = "" + _coinsAmount;
+    }
+
     private void OnEarnedFromEnemy(int coins)
     {
         _coinsAmount += coins;
