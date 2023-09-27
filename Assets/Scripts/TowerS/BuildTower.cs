@@ -13,7 +13,7 @@ public class BuildTower : MonoBehaviour
     [SerializeField] private Tile _buildEnable;
     [SerializeField] private GameObject _grid;
     [SerializeField] private Transform _parent;
-    private bool _buildingMode = false;
+    public static bool _buildingMode = false;
 
     void OnEnable()
     {
@@ -30,6 +30,14 @@ public class BuildTower : MonoBehaviour
         if(_buildingMode == false)
         {
             _buildingMode = true;
+            Time.timeScale = 0;
+            _grid.SetActive(true); 
+        }
+        else
+        {
+            _buildingMode = false;
+            Time.timeScale = 1;
+            _grid.SetActive(false); 
         }
     }
 
@@ -37,8 +45,6 @@ public class BuildTower : MonoBehaviour
     {
         if(_buildingMode)
         {
-            Time.timeScale = 0; 
-            _grid.SetActive(true);
             if (Input.GetMouseButtonDown(0))
             {
                 SetBuild();

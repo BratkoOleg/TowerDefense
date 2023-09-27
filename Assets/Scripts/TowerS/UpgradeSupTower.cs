@@ -39,6 +39,7 @@ public class UpgradeSupTower : MonoBehaviour
 
     private void OpenMenu()
     {
+        if(BuildTower._buildingMode == false)
         _menu.SetActive(true);
     }
 
