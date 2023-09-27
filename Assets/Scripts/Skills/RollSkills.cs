@@ -13,6 +13,7 @@ public class RollSkills : MonoBehaviour
     [SerializeField] Button _buttronRoll;
     [SerializeField] Button _buttronOk;
     [SerializeField] private Dictionary<GameObject, GameObject> SkillNetwork = new Dictionary<GameObject, GameObject>();
+    private bool haveDublicates = false;
 
     void OnEnable()
     {
@@ -34,12 +35,35 @@ public class RollSkills : MonoBehaviour
         _buttronOk.onClick.RemoveAllListeners();
     }
 
+    void Update()
+    {
+        if(haveDublicates == true)
+        {
+            Roll();
+        }
+    }
+
     private void Roll()
     {
+        haveDublicates = false;
         ClearRolled();
         for (int i = 0; i <= 2; i++)
         {            
             _rolledSkills[i] = _skillsCanvas[Random.Range(0, _skillsCanvas.Length)];
+        }
+        for (int i = 0; i < _rolledSkills.Length; i++)
+        {
+            for (int j = i + 1; j < _rolledSkills.Length; j++)
+            {
+                if(_rolledSkills[i] == _rolledSkills[j])
+                {
+                    haveDublicates = true;
+                }
+                else
+                {
+                    continue;
+                }
+            }
         }
         InstantiateSkills();
     }
