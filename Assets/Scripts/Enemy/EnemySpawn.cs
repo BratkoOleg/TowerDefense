@@ -12,6 +12,7 @@ public class EnemySpawn : MonoBehaviour
     [SerializeField] private float _time;
     [SerializeField] private float _waitBeforeStart = 2f;
     [SerializeField] private Transform _parent;
+    public static int _hazard = 1;
     private bool _spawnedSpawner = false;
     private bool _startedToSpawn = false;
 
@@ -55,7 +56,8 @@ public class EnemySpawn : MonoBehaviour
         {
             GameObject setEnemy = Instantiate(_enemys[Random.Range(0, _enemys.Length)], _directions[Random.Range(0, _directions.Length)],quaternion.identity);
             setEnemy.transform.SetParent(_parent);
-            setEnemy.GetComponent<Enemy>()._maxHP++;
+            setEnemy.GetComponent<Enemy>()._maxHP += _hazard;
+            setEnemy.GetComponent<Enemy>()._damage += _hazard;
             yield return new WaitForSeconds(_timerToSpawn);
         }
     }
@@ -63,6 +65,7 @@ public class EnemySpawn : MonoBehaviour
     private void SpawnSpawner()
     {
         _time = 0;
+        _hazard++;
         _spawnedSpawner = true;
         Instantiate(_enemySpawner, transform.position, quaternion.identity);
     }

@@ -6,10 +6,10 @@ using UnityEngine.UI;
 public class TowerSupport : MonoBehaviour
 {
     [SerializeField] private int _maxHP = 5;
-    [SerializeField] int _curHP;
-    [SerializeField] Image _image;
-    [SerializeField] Tilemap _tilemap;
-    [SerializeField] Tile _buildingAvaible;
+    [SerializeField] private int _curHP;
+    [SerializeField] private Image _image;
+    [SerializeField] private Tilemap _tilemap;
+    [SerializeField] private Tile _buildingAvaible;
     private bool _isAttacking;
 
     void Awake()

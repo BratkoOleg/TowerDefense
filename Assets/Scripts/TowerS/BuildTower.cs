@@ -72,6 +72,7 @@ public class BuildTower : MonoBehaviour
             _buildingMode = false;
         }
     }
+    
 
     private Vector3 GetMousePosition()
     {

@@ -5,7 +5,8 @@ using TMPro;
 public class UpgradeSupTower : MonoBehaviour
 {
     [SerializeField] private Button _openMenu;
-    [SerializeField] private Button _upgrade;
+    [SerializeField] private Button _upgradeGun;
+    [SerializeField] private Button _upgradeHP;
     [SerializeField] private Button _destroy;
     [SerializeField] private Button _exit;
     [SerializeField] private GameObject _menu;
@@ -17,7 +18,8 @@ public class UpgradeSupTower : MonoBehaviour
     {
         SetText(_costUpgrade);
         _openMenu.onClick.AddListener(OpenMenu);
-        _upgrade.onClick.AddListener(Upgrade);
+        _upgradeGun.onClick.AddListener(UpgradeGun);
+        _upgradeHP.onClick.AddListener(UpgradeHP);
         _destroy.onClick.AddListener(Destroy);
         _exit.onClick.AddListener(CloseMenu);
     }
@@ -25,9 +27,10 @@ public class UpgradeSupTower : MonoBehaviour
     void OnDisable()
     {
         _openMenu.onClick.RemoveAllListeners();
-        _upgrade.onClick.RemoveAllListeners();
+        _upgradeGun.onClick.RemoveAllListeners();
         _destroy.onClick.RemoveAllListeners();
         _exit.onClick.RemoveAllListeners();
+        _upgradeHP.onClick.RemoveAllListeners();
     }
 
     private void CloseMenu()
@@ -41,7 +44,12 @@ public class UpgradeSupTower : MonoBehaviour
         _menu.SetActive(true);
     }
 
-    private void Upgrade()
+    private void UpgradeHP()
+    {
+
+    }
+
+    private void UpgradeGun()
     {
         if(Wallet._coinsAmount >= _costUpgrade)
         {
