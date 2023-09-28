@@ -5,7 +5,7 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] Vector2 _target = Vector2.zero;
     [SerializeField] private float _speed;
-    [SerializeField] private int _maxHP = 2;
+    public int _maxHP = 2;
     [SerializeField] private int _coins = 1;
     [SerializeField] private int _exp = 1;
     [SerializeField] int _curHP;

@@ -60,6 +60,7 @@ public class UpgradeSupTower : MonoBehaviour
 
     private void Destroy()
     {
+        BuildTower._amountTowers--;
         Destroy(gameObject);
     }
 

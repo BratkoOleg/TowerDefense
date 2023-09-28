@@ -55,6 +55,7 @@ public class EnemySpawn : MonoBehaviour
         {
             GameObject setEnemy = Instantiate(_enemys[Random.Range(0, _enemys.Length)], _directions[Random.Range(0, _directions.Length)],quaternion.identity);
             setEnemy.transform.SetParent(_parent);
+            setEnemy.GetComponent<Enemy>()._maxHP++;
             yield return new WaitForSeconds(_timerToSpawn);
         }
     }
