@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.UI;
@@ -19,16 +18,6 @@ public class TowerSupport : MonoBehaviour
         _curHP = _maxHP;
     }
 
-    // private void OnTriggerEnter2D(Collider2D other) 
-    // {
-    //     if(other.gameObject.tag == "Enemy")
-    //     {
-    //         Debug.Log("sup tower got damage");
-    //         int enemyDamage;
-    //         enemyDamage = other.gameObject.GetComponent<Enemy>()._damage;
-    //         OnHealthChanged(enemyDamage);
-    //     }
-    // }
     private void OnTriggerEnter2D(Collider2D other) 
     {
         if(other.gameObject.tag == "Enemy")
@@ -36,7 +25,6 @@ public class TowerSupport : MonoBehaviour
             Debug.Log("tower got damage");
             int enemyDamage;
             enemyDamage = other.gameObject.GetComponent<Enemy>()._damage;
-            //OnHealthChanged(enemyDamage);
             _isAttacking = true;
             StartCoroutine(AttackingTower(enemyDamage));
         }

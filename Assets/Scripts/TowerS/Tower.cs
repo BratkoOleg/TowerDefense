@@ -1,8 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Tower : MonoBehaviour
@@ -42,7 +39,6 @@ public class Tower : MonoBehaviour
             Debug.Log("tower got damage");
             int enemyDamage;
             enemyDamage = other.gameObject.GetComponent<Enemy>()._damage;
-            //OnHealthChanged(enemyDamage);
             _isAttacking = true;
             StartCoroutine(AttackingTower(enemyDamage));
         }
@@ -55,17 +51,6 @@ public class Tower : MonoBehaviour
             _isAttacking = false;
         }
     }
-
-    // private void OnTriggerStay2D(Collider2D other)
-    // {
-    //     if(other.gameObject.tag == "Enemy")
-    //     {
-    //         Debug.Log("ATTACKING");
-    //         int enemyDamage;
-    //         enemyDamage = other.gameObject.GetComponent<Enemy>()._damage;
-    //         StartCoroutine(AttackingTower(enemyDamage));
-    //     }
-    // }
 
     private IEnumerator AttackingTower(int damage)
     {

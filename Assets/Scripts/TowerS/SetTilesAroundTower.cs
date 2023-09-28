@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -7,7 +5,6 @@ public class SetTilesAroundTower : MonoBehaviour
 {
     [SerializeField] Tilemap _tilemap;
     [SerializeField] Tile _towerTile;
-
     [SerializeField] Tile _buildEnable;
     private Vector3Int[] _directions =  {Vector3Int.up, Vector3Int.down, Vector3Int.left, Vector3Int.right};
 

@@ -1,8 +1,4 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class TowerGun : MonoBehaviour
@@ -57,21 +53,6 @@ public class TowerGun : MonoBehaviour
         StartCoroutine(ReloadGun());
     }
 
-    // void Update()
-    // {
-    //     SetRotationGun(SetNearestEnemy());
-        
-    //     if(_startedSkillBonus == true && _timer >= 0)
-    //     {
-    //         _timer -= Time.deltaTime;
-    //     }
-    //     else
-    //     {
-    //         _startedSkillBonus = false;
-    //         _reload = 1f;
-    //     }
-    // }
-
     private IEnumerator ReloadGun()
     {
         while(true)
@@ -81,12 +62,6 @@ public class TowerGun : MonoBehaviour
             yield return new WaitForSeconds(_reload);
         }
     }
-
-    // private void SetRotationGun(GameObject enemy)
-    // {
-    //     if(enemy != null)
-    //     this.gameObject.transform.rotation = Quaternion.LookRotation(transform.position, enemy.transform.position);
-    // }
 
     private GameObject SetNearestEnemy()
     {
