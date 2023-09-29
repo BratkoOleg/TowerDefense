@@ -7,6 +7,7 @@ public class TowerExpBar : MonoBehaviour
     private int _level;
     private int _maxXP = 10;
     private int _curXP;
+    public static int _lvlPoints = 0;
 
     void OnEnable()
     {
@@ -32,6 +33,7 @@ public class TowerExpBar : MonoBehaviour
             _curXP = 0;
             _image.fillAmount = 0;
             _level++;
+            _lvlPoints++;
             float nextMaxXp = (float)_maxXP * 0.5f; 
             _maxXP += (int)nextMaxXp;
             EventBus.Instance.LeveledUp?.Invoke(_level);

@@ -5,6 +5,7 @@ public class Level : MonoBehaviour
 {
     [SerializeField] private Text _levelText;
     [SerializeField] private Text _xpNeed;
+    [SerializeField] private Text _lvlPoints;
 
     void OnEnable()
     {
@@ -18,6 +19,11 @@ public class Level : MonoBehaviour
         EventBus.Instance.ChangedExp -= OnExpChanged;
     }
 
+    void Update()
+    {
+        _lvlPoints.text = "" + TowerExpBar._lvlPoints;
+    }
+
     private void OnExpChanged(int curXp, int maxXP)
     {
         _xpNeed.text = curXp + "/" + maxXP;
@@ -26,5 +32,6 @@ public class Level : MonoBehaviour
     private void OnLevelChanged(int level)
     {
         _levelText.text = "" + level;
+        _lvlPoints.text = "" + TowerExpBar._lvlPoints;
     }
 }
