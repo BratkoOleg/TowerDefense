@@ -11,7 +11,6 @@ public class TowerGun : MonoBehaviour
     [SerializeField] private Transform _weaponDir;
     [SerializeField] private float _reload = 1f;
     [SerializeField] private Transform _parent;
-
     private float _speedRotate = 10f;
     public int rotationOffset = -90;
     private float rotZ;
