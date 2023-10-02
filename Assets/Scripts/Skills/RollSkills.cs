@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class RollSkills : MonoBehaviour
 {
@@ -12,6 +13,9 @@ public class RollSkills : MonoBehaviour
     [SerializeField] Button _buttronRoll;
     [SerializeField] Button _buttronOk;
     [SerializeField] private Dictionary<GameObject, GameObject> SkillNetwork = new Dictionary<GameObject, GameObject>();
+    [SerializeField] private int _timesRerolled;
+    [SerializeField] private int _cost = 0;
+    [SerializeField] private TextMeshProUGUI _costText;
     private bool haveDublicates = false;
 
     void OnEnable()
@@ -24,7 +28,7 @@ public class RollSkills : MonoBehaviour
         
         Roll();
         
-        _buttronRoll.onClick.AddListener(Roll);
+        _buttronRoll.onClick.AddListener(Reroll);
         _buttronOk.onClick.AddListener(CloseWindow);
     }
 
@@ -65,6 +69,18 @@ public class RollSkills : MonoBehaviour
             }
         }
         InstantiateSkills();
+    }
+
+    private void Reroll()
+    {
+        if(Wallet._coinsAmount >= _cost)
+        {
+            _timesRerolled++;
+            _cost++;
+            _cost *= _timesRerolled;
+            _costText.text = "" + _cost;
+            Roll();
+        }
     }
 
     private void ClearRolled()
