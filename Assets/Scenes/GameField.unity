@@ -36256,10 +36256,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5222283752962660681, guid: e8d3b97e48e73ee4ca5b7905137b8b18, type: 3}
-      propertyPath: _cheatCoin
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5222283753119485614, guid: e8d3b97e48e73ee4ca5b7905137b8b18, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0

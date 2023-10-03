@@ -1120,7 +1120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wallet: {fileID: 0}
-  _cheatCoin: 1000
+  _cheatCoin: 0
 --- !u!222 &5222283752962660682
 CanvasRenderer:
   m_ObjectHideFlags: 0
