@@ -5,20 +5,24 @@ using TMPro;
 
 public class BuildTower : MonoBehaviour
 {
-    [SerializeField] private Button _button;
     [SerializeField] private GameObject _tower;
+    [SerializeField] private GameObject _grid;
+
     [SerializeField] private Tilemap _tilemap;
     [SerializeField] private Tile _towerTile;
     [SerializeField] private Tile _buildEnable;
-    [SerializeField] private GameObject _grid;
-    [SerializeField] private Transform _parent;
-    [SerializeField] private int _buildCost;
+
     [SerializeField] private TextMeshProUGUI _costText;
     [SerializeField] private TextMeshProUGUI _amountBuildedTowers;
-    private int _buildsEnable = 0;
-    private int lvl;
+
+    [SerializeField] private Button _button;
+    [SerializeField] private Transform _parent;
+    [SerializeField] private int _buildCost;
+    
+    public static int _buildsEnable = 0;
     public static int _amountTowers;
     public static bool _buildingMode = false;
+    private int lvl;
 
     void OnEnable()
     {
