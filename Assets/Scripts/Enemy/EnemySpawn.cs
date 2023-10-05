@@ -26,7 +26,7 @@ public class EnemySpawn : MonoBehaviour
             _startedToSpawn = true;
         }
 
-        if(_time >= 120 && _spawnedSpawner == false)
+        if(_time >= 100 && _spawnedSpawner == false)
         {
             SpawnSpawner();
         }
@@ -64,7 +64,7 @@ public class EnemySpawn : MonoBehaviour
 
     private void SpawnSpawner()
     {
-        _time = 0;
+        _time = 30;
         _hazard++;
         _spawnedSpawner = true;
         Instantiate(_enemySpawner, transform.position, quaternion.identity);
