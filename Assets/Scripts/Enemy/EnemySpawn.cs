@@ -58,6 +58,7 @@ public class EnemySpawn : MonoBehaviour
             setEnemy.transform.SetParent(_parent);
             setEnemy.GetComponent<Enemy>()._maxHP += _hazard;
             setEnemy.GetComponent<Enemy>()._damage += _hazard;
+            setEnemy.GetComponent<Enemy>()._coins += _hazard;
             yield return new WaitForSeconds(_timerToSpawn);
         }
     }
