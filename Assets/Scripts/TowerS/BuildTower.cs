@@ -48,13 +48,13 @@ public class BuildTower : MonoBehaviour
         if(_buildingMode == false && _buildsEnable > 0 && Wallet._coinsAmount >= _buildCost)
         {
             _buildingMode = true;
-            Time.timeScale = 0;
+            // Time.timeScale = 0;
             _grid.SetActive(true); 
         }
         else
         {
             _buildingMode = false;
-            Time.timeScale = 1;
+            // Time.timeScale = 1;
             _grid.SetActive(false); 
         }
     }

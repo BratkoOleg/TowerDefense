@@ -26,7 +26,7 @@ public class Pause : MonoBehaviour
     private void SetMenuOpen()
     {
         _pauseMenu.SetActive(true);
-        Time.timeScale = 0;
+        // Time.timeScale = 0;
     }
 
     private void ExitFromApp()
@@ -37,6 +37,6 @@ public class Pause : MonoBehaviour
     private void Continue()
     {
         _pauseMenu.SetActive(false);
-        Time.timeScale = 1;
+        // Time.timeScale = 1;
     }
 }

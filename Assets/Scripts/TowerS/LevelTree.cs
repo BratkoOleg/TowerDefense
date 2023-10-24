@@ -22,12 +22,12 @@ public class LevelTree : MonoBehaviour
         if(_menu.activeSelf == false)
         {
             _menu.SetActive(true);
-            Time.timeScale = 0;
+            // Time.timeScale = 0;
         }
         else
         {
             _menu.SetActive(false);
-            Time.timeScale = 1;
+            // Time.timeScale = 1;
         }
     }
 }
