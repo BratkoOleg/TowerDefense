@@ -8,6 +8,7 @@ public class RollSkills : MonoBehaviour
     [SerializeField] GameObject[] _skillsCanvas;
     [SerializeField] GameObject[] _skillsGame;
     [SerializeField] GameObject[] _rolledSkills;
+    [SerializeField] public static GameObject[] _rolledSkillsForShop = new GameObject[3];
     [SerializeField] Transform _parentCanvas;
     [SerializeField] Transform _parentGame;
     [SerializeField] Button _buttronRoll;
@@ -53,6 +54,7 @@ public class RollSkills : MonoBehaviour
         for (int i = 0; i <= 2; i++)
         {            
             _rolledSkills[i] = _skillsCanvas[Random.Range(0, _skillsCanvas.Length)];
+            _rolledSkillsForShop[i] = _rolledSkills[i];
         }
         for (int i = 0; i < _rolledSkills.Length; i++)
         {

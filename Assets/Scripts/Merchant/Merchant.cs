@@ -39,18 +39,14 @@ public class Merchant : MonoBehaviour
 
     private void StartShop()
     {
-        // for (int i = 0; i < _skillsParent.childCount; i++)
-        // {
-        //     _skillsGame[i] = _skillsParent.GetChild(i).gameObject;
-        // }
         ShowCurSkills();
     }
 
     private void ShowCurSkills()
     {
-        for (int i = 0; i < _skillsGame.Length; i++)
+        for (int i = 0; i < 3; i++)
         {
-            GameObject skill = Instantiate(_skillsGame[i], Vector3.zero, Quaternion.identity);
+            GameObject skill = Instantiate(RollSkills._rolledSkillsForShop[i], Vector3.zero, Quaternion.identity);
             skill.transform.SetParent(_ShopCurSkillsParent);
         }
     }
@@ -68,6 +64,13 @@ public class Merchant : MonoBehaviour
 
     private void CloseShop()
     {
+        if(_ShopCurSkillsParent.childCount != 0)
+        {
+            for (int i = 0; i < _ShopCurSkillsParent.childCount; i++)
+            {
+                Destroy(_ShopCurSkillsParent.GetChild(i).gameObject);
+            }
+        }
         Time.timeScale = 1;
         _window.SetActive(false);   
     }

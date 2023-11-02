@@ -325,6 +325,16 @@ MonoBehaviour:
   _timer: 60
   _window: {fileID: 1135834939}
   _exit: {fileID: 433585497}
+  _skillsParent: {fileID: 353394937}
+  _ShopCurSkillsParent: {fileID: 2028965631}
+  _skillsCanvas:
+  - {fileID: 5225197685687385605, guid: 246c125fb4527ad43a4b508d17d19770, type: 3}
+  - {fileID: 8564867823283142671, guid: f984cd4359252614984d96ea30c122cd, type: 3}
+  - {fileID: 8564867823283142671, guid: ca22e88851a84294b966d184c5ea3622, type: 3}
+  _skillsGame:
+  - {fileID: 6946348196342723671, guid: d2094f17d2308ec40ae9a015440294c8, type: 3}
+  - {fileID: 6946348196342723671, guid: 9931515dcab37064bbd26da98dbe6a68, type: 3}
+  - {fileID: 6946348196342723671, guid: 8fc571286f622664f98df49e88089e42, type: 3}
 --- !u!4 &141060102
 Transform:
   m_ObjectHideFlags: 0
