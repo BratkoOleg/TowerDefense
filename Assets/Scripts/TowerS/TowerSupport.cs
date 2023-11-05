@@ -52,8 +52,6 @@ public class TowerSupport : MonoBehaviour
     {
         if(_tilemap != null)
         _tilemap.SetTile(SetPosition(), _buildingAvaible);
-
-        BuildTower._amountTowers--;
     }
 
     private void OnHealthChanged(int damage)

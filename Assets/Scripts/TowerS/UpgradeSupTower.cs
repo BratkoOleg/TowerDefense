@@ -69,6 +69,8 @@ public class UpgradeSupTower : MonoBehaviour
     private void Destroy()
     {
         BuildTower._amountTowers--;
+        BuildTower._buildsEnable++;
+        Debug.Log(BuildTower._buildsEnable);
         Destroy(gameObject);
     }
 

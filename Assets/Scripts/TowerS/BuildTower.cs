@@ -68,6 +68,8 @@ public class BuildTower : MonoBehaviour
                 SetBuild();
             }
         }
+
+        _amountBuildedTowers.text = _amountTowers + "/" + lvl;
     }
 
     private void SetBuild()
