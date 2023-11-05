@@ -77,6 +77,13 @@ public class Merchant : MonoBehaviour
                 Destroy(_ShopCurSkillsParent.GetChild(i).gameObject);
             }
         }
+        if(_shopItemsParent.childCount != 0)
+        {
+            for (int i = 0; i < _shopItemsParent.childCount; i++)
+            {
+                Destroy(_shopItemsParent.GetChild(i).gameObject);
+            }
+        }
         Time.timeScale = 1;
         _window.SetActive(false);   
     }
