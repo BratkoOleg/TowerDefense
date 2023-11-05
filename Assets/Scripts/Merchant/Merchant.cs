@@ -11,16 +11,12 @@ public class Merchant : MonoBehaviour
     [SerializeField] private Button _exit;
     [SerializeField] private Transform _skillsParent;
     [SerializeField] private Transform _ShopCurSkillsParent;
+    [SerializeField] private Transform _shopItemsParent;
     [SerializeField] GameObject[] _skillsCanvas;
-    [SerializeField] GameObject[] _skillsGame;
     [SerializeField] private Dictionary<GameObject, GameObject> SkillNetwork = new Dictionary<GameObject, GameObject>();
 
     void OnEnable()
     {
-        SkillNetwork.Add(_skillsCanvas[0], _skillsGame[0]);
-        SkillNetwork.Add(_skillsCanvas[1], _skillsGame[1]);
-        SkillNetwork.Add(_skillsCanvas[2], _skillsGame[2]);
-
         _exit.onClick.AddListener(CloseShop);
     }
 
@@ -40,6 +36,16 @@ public class Merchant : MonoBehaviour
     private void StartShop()
     {
         ShowCurSkills();
+        ShowAvailableSkills();
+    }
+
+    private void ShowAvailableSkills()
+    {
+        for (int i = 0; i < 6; i++)
+        {
+            GameObject skill = Instantiate(_skillsCanvas[Random.Range(0,_skillsCanvas.Length)], Vector3.zero, Quaternion.identity);
+            skill.transform.SetParent(_shopItemsParent);
+        }
     }
 
     private void ShowCurSkills()
