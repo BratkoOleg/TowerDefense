@@ -6,7 +6,7 @@ public class Tower : MonoBehaviour
 {
     [SerializeField] private int _level;
     [SerializeField] private int _maxHP = 1000;
-    [SerializeField] int _curHP;
+    [SerializeField] int _curHP;    
     [SerializeField] Image _image;
     private int _kills, _coins;
     private bool _isAttacking;
@@ -20,6 +20,7 @@ public class Tower : MonoBehaviour
     void OnDisable()
     {
         EventBus.Instance.Skill2WasUsed -= OnHealUp;
+        EventBus.Instance.EarnedFromEnemy -= Summary;
     }
 
     void Awake()

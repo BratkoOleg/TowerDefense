@@ -125,7 +125,7 @@ TextureImporter:
         width: 50
         height: 81
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -146,7 +146,7 @@ TextureImporter:
         width: 50
         height: 81
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -179,6 +179,90 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: skills_3
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 91
+        width: 50
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbe822b604098df47a97cfe794dffa6d
+      internalID: -1331827591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skills_4
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 91
+        width: 50
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44bb121eb54b58a4b9df36810c2f7124
+      internalID: 976149976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skills_5
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 9
+        width: 50
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1464d03189d99114a85337fd27a9e940
+      internalID: 310189677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skills_6
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 91
+        width: 50
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ec4c66fbd1343249b5d11c9f3f5d1c4
+      internalID: 1161948695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -192,7 +276,11 @@ TextureImporter:
     nameFileIdTable:
       skills_1: 745114609
       skills_2: -1618096540
+      skills_6: 1161948695
+      skills_3: -1331827591
+      skills_4: 976149976
       skills_0: 463000205
+      skills_5: 310189677
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

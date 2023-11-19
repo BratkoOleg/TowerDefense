@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,11 +7,9 @@ public class Merchant : MonoBehaviour
     [SerializeField] private float _timer;
     [SerializeField] private GameObject _window;
     [SerializeField] private Button _exit;
-    [SerializeField] private Transform _skillsParent;
     [SerializeField] private Transform _ShopCurSkillsParent;
     [SerializeField] private Transform _shopItemsParent;
     [SerializeField] GameObject[] _skillsCanvas;
-    [SerializeField] private Dictionary<GameObject, GameObject> SkillNetwork = new Dictionary<GameObject, GameObject>();
 
     void OnEnable()
     {
